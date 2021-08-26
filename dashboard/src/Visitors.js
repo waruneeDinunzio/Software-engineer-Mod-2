@@ -7,6 +7,9 @@ class Visitors extends React.Component {
       <div className='visitors'>
           <h3>Website Visitors</h3>
           <h2>821</h2>
+          <div id ='visitorContent'>
+
+          </div>
       </div>
     )
   }
