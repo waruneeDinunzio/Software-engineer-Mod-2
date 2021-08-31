@@ -11,30 +11,30 @@ class ProductList extends Component {
   }
 
   // toggleCart function
-  toggleCart = (event) => {
-    // console.log(event)
-    // update our inShoppingCart state to switch from true to false
-    this.setState({
-      // what state are we trying to update
-      // * this.setState automatically knows that we are trying to update our state
-      // * the exclamation point just means that we want to replace the current value of our state to it's opposite
-      inShoppingCart: !this.state.inShoppingCart
-    })
-  }
+  // toggleCart = (event) => {
+  //   // console.log(event)
+  //   // update our inShoppingCart state to switch from true to false
+  //   this.setState({
+  //     // what state are we trying to update
+  //     // * this.setState automatically knows that we are trying to update our state
+  //     // * the exclamation point just means that we want to replace the current value of our state to it's opposite
+  //     inShoppingCart: !this.state.inShoppingCart
+  //   })
+  // }
 
   render() {
     // console.log("we are inside ProductList and this is our props", this.props)
     // console.log(this)
-    console.log("we just updated our inShoppingCart", this.state.inShoppingCart)
-
+    // console.log("we just updated our inShoppingCart", this.state.inShoppingCart)
     return (
       // write event listener for click in our div
-      <div onClick={this.toggleCart}>
+      // * if we are passing down a function from App.js, we call on that function by invoking the property name that we assigned in App.js. In our case, we called it handleAdd so in this component we call it by saying this.props.handleAdd()
+      <li onClick={() => this.props.handleAdd(this.props.product)}>
         {/* this.props refers to the object that was passed from the parent component App */}
         {/* // * Ternary Operator - if else statements  */}
         {this.props.product.name} {this.props.product.price} {this.state.inShoppingCart ? <span> is in the shopping cart!</span> : ''}
       
-      </div>
+      </li>
     );
   }
 }
