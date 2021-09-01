@@ -1,0 +1,24 @@
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-bar {
+  background-color: bisque;
+  height: 50px;
+  width: 100%;
+}
+#nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+#footer {
+  background-color: lightpink;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+}
