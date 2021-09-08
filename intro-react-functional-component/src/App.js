@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Child from './Child';
 // ES6 - function expression
 const App = () => {
   // Since we don't have access to a state object anymore, we will need t use a React Hook. useState Hook is what we will be using if we wanted to work with a state.
@@ -54,6 +54,7 @@ const App = () => {
         </form>
         <h1>This is my name: {name}</h1>
       </div>
+      <Child name={name}/>
     </div>
   );
 };

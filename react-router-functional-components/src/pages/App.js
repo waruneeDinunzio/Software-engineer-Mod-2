@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Home from './Home'
 import About from './About'
 import Contact from './Contact';
+import Giphy from './Giphy';
 import '../App.css'
 const App = () => {
   return (
@@ -21,6 +22,9 @@ const App = () => {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/giphy">
+              <Giphy />
             </Route>
           </Switch>
         <Footer />
